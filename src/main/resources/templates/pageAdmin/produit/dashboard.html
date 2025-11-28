@@ -1,0 +1,41 @@
+<!doctype html>
+<html th:replace="base :: html" lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="content">
+    <main class="py-5">
+        <div class="container">
+
+            <h1 class="mb-5 text-center">Dashboard Produits</h1>
+
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card p-3 text-center shadow-sm">
+                        <h4>Total produits</h4>
+                        <h2 th:text="${totalProduits}"></h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 text-center shadow-sm">
+                        <h4>Stock cumulé</h4>
+                        <h2 th:text="${stockTotal}"></h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 text-center shadow-sm">
+                        <h4>Prix moyen (€)</h4>
+                        <h2 th:text="${prixMoyen}"></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mb-3">
+                <a th:href="@{/admin/produits/create}" class="btn btn-success btn-lg">+ Nouveau produit</a>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</html>

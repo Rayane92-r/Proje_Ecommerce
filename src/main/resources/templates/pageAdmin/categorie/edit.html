@@ -1,0 +1,35 @@
+<!doctype html>
+<html th:replace="base :: html" lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="content">
+    <main class="py-5">
+        <div class="container">
+
+            <h1 class="mb-5 text-center">Modifier une catégorie</h1>
+
+            <form th:object="${categorie}"
+                  th:action="@{'/admin/categories/edit/' + ${categorie.id}}"
+                  method="post"
+                  class="w-50 mx-auto">
+
+                <!-- ID caché -->
+                <input type="hidden" th:field="*{id}"/>
+
+                <div class="mb-3">
+                    <label class="form-label">Nom de la catégorie</label>
+                    <input type="text" class="form-control" th:field="*{nom}" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Modifier</button>
+
+            </form>
+
+            <div class="mt-3">
+                <a th:href="@{/admin/categories}" class="btn btn-secondary">← Retour</a>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</html>

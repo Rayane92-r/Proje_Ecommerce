@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="fragments/head :: head"></th:block>
+
+<body>
+
+<th:block th:replace="fragments/navbar :: navbar"></th:block>
+
+<div class="container py-5" style="max-width:600px;">
+    <h1 class="fw-bold text-center mb-4">Créer un compte</h1>
+
+    <form>
+
+        <div class="mb-3">
+            <label class="form-label">Nom</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Mot de passe</label>
+            <input type="password" class="form-control">
+        </div>
+
+        <button class="btn btn-success w-100">Créer mon compte</button>
+
+    </form>
+</div>
+
+</body>
+</html>
